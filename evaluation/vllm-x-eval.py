@@ -139,10 +139,10 @@ def main():
     model_path = args.model_path
     tokenizer_path = args.token_path
 
-    parallel_size = args.gpus     # gpu数量
+    parallel_size = args.gpus     # 
     #eval_path = 'humaneval_java.jsonl'
-    eval_path = args.input    # 数据集
-    batch_size = 164     # batch大小
+    eval_path = args.input    # 
+    batch_size = 164     # 
     sampling_params = SamplingParams(temperature=0.2, top_p=0.95, max_tokens=512)
     llm = LLM(model=model_path, tensor_parallel_size=parallel_size, trust_remote_code=True,tokenizer=tokenizer_path, max_model_len=8192)
     print('load model success')

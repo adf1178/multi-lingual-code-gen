@@ -44,7 +44,6 @@ python3 -m torch.distributed.run \
   --num_warmup_steps 100 \
   --weight_decay 0.05 \
   --output_dir="~/cl-34b" \
-  #--resume_from_checkpoint=/mnt/cephfs/sakura/models/st_3b_other/checkpoint-600
 
 # Last, upload ckpt to HDFS
 #hadoop fs -put ./ckpt ${CkptDir}

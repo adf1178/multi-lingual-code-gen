@@ -18,6 +18,7 @@ conda install mpi4py
 pip install torch
 pip install transformers >= 4.34.1
 ```
+To use different deepspeed strategy, modify the line 295 of `training/chat-star.py`
 Modify the bash file: training/mix-torch.sh
 
 set nproc_per_node as your available nums of GPU
