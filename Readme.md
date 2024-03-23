@@ -86,3 +86,21 @@ Provide a piece of erroneous code as a reference to increase misdirection.
 Propose higher time or space complexity requirements, but please refrain from doing so frequently.
 
 ```
+
+# Details of Translation-Aware Tuning
+
+We use the following template for translation aware tuning
+
+```
+Given an instruction in English, please first translate it into Chinese and then answer according to the instruction.
+
+The English instruction is:
+[ENG_INS]
+The translated Chinese instruction is:
+[CHI_INS]
+Your answer is:
+[CHI_ANS]
+
+```
+
+$[\mathit{ENG\_INS}]$, $[\mathit{CHI\_INS}]$, $[\mathit{CHI\_ANS}]$ represent English instruction, Chinese instruction, and corresponding answers in Chinese, respectively.
