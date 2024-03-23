@@ -136,13 +136,9 @@ def main():
     parser.add_argument("--fim", action="store_true", default=False)
     args = parser.parse_args()
     
-    #model_path = '/home/czwang/models/starcoder'    # 模型路径
     model_path = args.model_path
-    #model_path = '/apdcephfs/private_sakurapeng/models/codellama-7b-python'
     tokenizer_path = args.token_path
-    #tokenizer_path = model_path
-    #model_path = '/dev/shm/tmp/checkpoint-800/'
-    #tokenizer_path = '/home/czwang/models/santacoder-wxg'
+
     parallel_size = args.gpus     # gpu数量
     #eval_path = 'humaneval_java.jsonl'
     eval_path = args.input    # 数据集
