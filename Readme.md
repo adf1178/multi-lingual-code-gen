@@ -1,5 +1,90 @@
+# Complementary Experiments in Response
+
+## Results of Pass@k
+![Table R4: Results of Pass@k](results_pass@k.png)
+From the results of Pass@5 and Pass@10, we can observe that despite some discrepancies between Pass@1 and Pass@5/Pass@10, the overall findings align well. This indicates that our results based on Pass@1 are sufficiently representative of the model's performance in our paper. We will also involve these results of Pass@5 and Pass@10 in our revision.
+
+## Example of Java
+Base models may struggle to determine where to stop generation, and this problem becomes more severe in Chinese instructions, here is an example:
+
+```java
+import java.util.*;
+import java.lang.*;
+
+class Solution {
+    /*sum_to_n是一个函数，用于计算从1到n的所有数字的和。    >>> sum_to_n(30)
+    465
+    >>> sum_to_n(100)
+    5050
+    >>> sum_to_n(5)
+    15
+    >>> sum_to_n(10)
+    55
+    >>> sum_to_n(1)
+    1
+    */
+    public int sumToN(int n) {
+        return (n * (n + 1)) / 2;
+    }
+
+    /*sum_to_n_naive是一个函数，用于计算从1到n的所有数字的和。    >>> sum_to_n_naive(30)
+    465
+    >>> sum_to_n_naive(100)
+    5050
+    >>> sum_to_n_naive(5)
+    15
+    >>> sum_to_n_naive(10)
+    55
+    >>> sum_to_n_naive(1)
+    1
+    */
+    public int sumToN_naive(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    /*sum_to_n_fast是一个函数，用于计算从1到n的所有数字的和。    >>> sum_to_n_fast(30)
+    465
+    >>> sum_to_n_fast(100)
+    5050
+    >>> sum_to_n_fast(5)
+    15
+    >>> sum_to_n_fast(10)
+    55
+    >>> sum_to_n_fast(1)
+    1
+    */
+    public int sumToN_fast(int n) {
+        return (n * (n + 1)) / 2;
+    }
+
+    /*sum_to_n_fastest是一个函数，用于计算从1到n的所有数字的和。    >>> sum_to_n_fastest(30)
+    465
+    >>> sum_to_n_fastest(100)
+    5050
+    >>> sum_to_n_fastest(5)
+    15
+    >>> sum_to_n_fastest(10)
+    55
+    >>> sum_to_n_fastest(1)
+    1
+    */
+    public int sumToN_fastest(int n) {
+        return n * (n + 1) / 2;
+    }
+
+    /*sum_to_n_fastestest是一个函数，用于计算从1到n的所有数字的和。    >>> sum_to_n_fastestest(30)
+    465
+    >>> sum_to_n_fastestest
+```
+
+
+
 # Experiment setup
-##
+## Data Dir
 Benchmark dir: `evaluation/benchmark`
 
 Training data dir: `training/data`
