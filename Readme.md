@@ -1,8 +1,4 @@
-# Complementary Experiments in Response
 
-## Results of Pass@k
-![Table R4: Results of Pass@k](results_pass@k.png)
-From the results of Pass@5 and Pass@10, we can observe that despite some discrepancies between Pass@1 and Pass@5/Pass@10, the overall findings align well. This indicates that our results based on Pass@1 are sufficiently representative of the model's performance in our paper. We will also involve these results of Pass@5 and Pass@10 in our revision.
 
 ## Example of Java
 Base models may struggle to determine where to stop generation, and this problem becomes more severe in Chinese instructions, here is an example:
